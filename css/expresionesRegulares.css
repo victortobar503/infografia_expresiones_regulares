@@ -1,4 +1,4 @@
-
+/* Fuente base y estilos generales */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -10,51 +10,52 @@ body {
   min-height: 100vh;
 }
 
+/* Encabezado */
 header {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 h1 {
   margin: 10px 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ddd;
 }
 
+/* Contenido principal */
 main {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex: 1;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Formulario */
 form {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 40px;
-  border-radius: 15px;
-  width: 400px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;          /* Ocupa casi todo en móviles */
+  max-width: 350px;    /* Máximo en pantallas grandes */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
-}
-
-form:hover {
-  transform: scale(1.02);
+  gap: 15px;           /* Espaciado limpio entre elementos */
+  box-sizing: border-box;
 }
 
 label {
-  margin-top: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 input {
   padding: 12px;
-  margin-top: 5px;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -62,13 +63,13 @@ input {
   box-sizing: border-box;
 }
 
+/* Botón */
 button {
-  margin-top: 25px;
-  padding: 14px;
+  padding: 12px;
   background: #4CAF50;
   border: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -78,43 +79,50 @@ button:hover {
   background: #45a049;
 }
 
-@keyframes fadeSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Mensajes de error / validación */
 .error {
-  font-size: 0.9rem;
-  margin-top: 5px;
+  font-size: 0.85rem;
   display: block;
-  font-weight: bold;
-  opacity: 0; /* Inicialmente invisible */
-  transition: opacity 0.3s ease;
+  font-weight: 500;
+  min-height: 20px; /* para que no mueva los campos */
 }
 
 .error.valid {
-  color: #4CAF50; /* Verde ✔ */
-  animation: fadeSlide 0.3s ease forwards;
+  color: #4CAF50;
 }
 
 .error.invalid {
-  color: #ff4d4d; /* Rojo ❌ */
-  animation: fadeSlide 0.3s ease forwards;
+  color: #ff4d4d;
 }
 
+/* Sección de explicación */
 .info {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 30px auto 20px auto;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #ddd;
-  line-height: 1.5;
+  line-height: 1.4;
+  padding: 0 15px;
 }
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
 
 
