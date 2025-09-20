@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación con Expresiones Regulares</title>
+  <link rel="stylesheet" href="css/expresionesRegulares.css">
+</head>
+<body>
+  <header>
+    <h1>Validación con Expresiones Regulares</h1>
+    <p>Prueba cómo funcionan los Regex en JavaScript</p>
+
+  </header>
+
+  <main>
+    <form id="regexForm">
+      <label for="email">Correo electrónico</label>
+      <input type="text" id="email" placeholder="ejemplo@mail.com" required>
+      <span class="error" id="emailError"></span>
+
+      <label for="phone">Número de teléfono</label>
+      <input type="text" id="phone" placeholder="2222-2222" required>
+      <span class="error" id="phoneError"></span>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+      <span class="error" id="passwordError"></span>
+
+      <button type="submit">Validar</button>
+    </form>
+
+    <section class="info">
+  <h2>¿Cómo funciona?</h2>
+  <p>
+    Este formulario valida los datos con expresiones regulares en JavaScript. 
+    Se revisa el formato del correo, el número salvadoreño (2222-2222) 
+    y una contraseña segura con letras, números y símbolos.
+  </p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Desarrollado utilizando usando JavaScript y Regex</p>
+  </footer>
+
+  <script src="js/expresionesRegulares.js"></script>
+</body>
+</html>
+
